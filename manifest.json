@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Gmail Enhancer",
+  "version": "1.0",
+  "description": "Enhance Gmail with custom features.",
+  "permissions": ["scripting"],
+  "host_permissions": ["https://mail.google.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js", "customButton.js"]
+    }
+  ]
+}
