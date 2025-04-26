@@ -1,14 +1,29 @@
 {
   "manifest_version": 3,
-  "name": "Gmail Enhancer",
+  "name": "Garden - Gmail Smart Reply Suggestion",
   "version": "1.0",
-  "description": "Enhance Gmail with custom features.",
-  "permissions": ["scripting"],
-  "host_permissions": ["https://mail.google.com/*"],
+  "description": "Suggests email replies in Gmail using ChatGPT.",
+  "permissions": [
+     "scripting",
+     "activeTab"
+  ],
+  "host_permissions": [
+     "https://mail.google.com/*"
+  ],
   "content_scripts": [
-    {
-      "matches": ["https://mail.google.com/*"],
-      "js": ["content.js", "customButton.js"]
-    }
-  ]
+     {
+        "matches":[
+           "https://mail.google.com/*"
+        ],
+        "js":[
+           "customButton.js"
+        ]
+     }
+  ],
+  "icons": {
+    "16":"icon16.png",
+    "32":"icon32.png",
+    "64":"icon64.png",
+    "128":"icon128.png"
+  }
 }
